@@ -1,0 +1,38 @@
+:root {
+    --background-color: #474545;
+    --header-color: #1a1a1a;
+    --header-theme-color: #c9ba98;
+    --header-theme-hover-color: #ddcdaa;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: var(--background-color);
+}
+
+.header {
+    display: flex;
+    justify-content: right;
+    align-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    background: var(--header-color);
+}
+
+.header-theme {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: "fantasy";
+    color: var(--header-theme-color);
+    background: transparent;
+    border: none;
+    margin: 0px;
+    margin-right: 1%;
+    padding: 1%;
+    text-decoration: none;
+}
+
+.header-theme:hover {
+    color: var(--header-theme-hover-color);
+}
