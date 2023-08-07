@@ -1,0 +1,8 @@
+.header {
+    background-color: linear-gradient(to right, #38a2d7, #561139);
+}
+
+.header-button {
+    font-size: large;
+    font-family: "fantasy";
+}
