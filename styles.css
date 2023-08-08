@@ -1,38 +1,123 @@
 :root {
+    /* Normal colors */
     --background-color: #474545;
     --header-color: #1a1a1a;
     --header-theme-color: #c9ba98;
     --header-theme-hover-color: #ddcdaa;
+    --menu-color: #6a634e;
+    --menu-select-color: #b3ab95;
+    --menu-text-color: #6d4f39;
+    --menu-text-color-shadow: #8a6448;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    background: var(--background-color);
+* {
+    margin: 0;
+    padding: 0;
 }
-
+  
 .header {
-    display: flex;
-    justify-content: right;
-    align-content: space-evenly;
-    margin: 0px;
-    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7%;
     background: var(--header-color);
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-left, .header-right {
+    width: 25%;
+}
+
+.header-right {
+    display: flex;
+    justify-content: end;
+}
+
+.header-middle {
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+}
+
+.header-middle > p {
+    font-family: "fantasy";
+    font-weight: bold;
+    font-size: xx-large;
+    color: var(--menu-text-color);
+    text-shadow: 1px 1px 2px var(--header-theme-hover-color);
 }
 
 .header-theme {
-    font-size: x-large;
-    font-weight: bold;
-    font-family: "fantasy";
-    color: var(--header-theme-color);
-    background: transparent;
-    border: none;
-    margin: 0px;
-    margin-right: 1%;
+    width: auto;
+    height: auto;
+    max-width: 80%;
+    max-height: 80%;
+    align-self: center;
+    justify-self: center;
     padding: 1%;
-    text-decoration: none;
 }
 
 .header-theme:hover {
-    color: var(--header-theme-hover-color);
+    cursor: pointer;
+}
+
+.header-icon {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+    justify-self: center;
+    padding: 0px;
+}
+
+.header-icon:hover {
+    cursor: pointer;
+}
+  
+.menu {
+    position: fixed;
+    top: 7%;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+    overflow: auto;
+    background: var(--menu-color);
+}
+  
+.menu ul {
+    padding-top: 3%;
+    list-style: none;
+}
+  
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: "fantasy";
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.menu-selected {
+    background: var(--menu-select-color);
+}
+  
+.content {
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: var(--background-color);
+}
+  
+.content p {
+    margin: 10px;
 }
