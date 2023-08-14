@@ -149,6 +149,15 @@
 .menu-selected:hover {
     background: var(--menu-select-color-hover);
 }
+
+.submenu {
+    padding-left: 15%;
+}
+
+.submenu li > a {
+    padding: 0px;
+    font-size: large;
+}
   
 .content {
     display: flex;
@@ -209,6 +218,7 @@ td > a {
 }
 
 table {
+    border-radius: 5px;
     border: 2px solid var(--header-color);
     border-collapse: collapse;
     margin: 3% 10%;
