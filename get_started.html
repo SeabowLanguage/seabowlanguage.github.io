@@ -34,9 +34,9 @@
         </div>
 
         <div class="content">
-            <h1>Seabow data types:</h1>
+            <h1 id="datatypes">Seabow data types:</h1>
             <p>Data types are used to store many kind of data in different form. Here all the primitive types of seabow (i.e basic types).</p>
-            <table id="datatypes">
+            <table>
                 <tr>
                     <th>Type</th>
                     <th>Description</th>
@@ -152,13 +152,29 @@
                     <td>a resizable sequence of key-value relation of specific types</td>
                     <td>size of all key-value stored</td>
                 </tr>
+                <tr>
+                    <td>function</td>
+                    <td>a sequence of seabow line-code with arguments and returned values</td>
+                    <td></td>
+                </tr>
             </table>
 
-            <h1>Variables in seabow:</h1>
+            <h1 id="variables">Variables in seabow:</h1>
+            <p>In seabow, you can declare variables which allows you to store values like this:</p>
             
-            <div class="codeblock" id="variables">
-                <div class="codeline"> <pre class="code-type">&#60type&#62</pre> <pre class="code-var-word">&#60var_name&#62</pre> </div>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62  </pre> <pre class="code-operator">=  </pre> <pre class="code-syntax">&#60value&#62</pre> <pre class="code-syntax">;</pre> </div>
             </div>
+
+            <p>&#60modifiers&#62 ➜ Optional. Used to modify usability of the variable.</p>
+            <ul>
+                <li>const: used to specify that the variable can not be reassigned.</li>
+                <li>global: Used to specify that the variable can be used everywhere on the code.</li>
+            </ul>
+            <p style="padding-top: 1%;">&#60type&#62 ➜ The type of data you want to store in the variable.</p>
+            <p style="padding-top: 1%;">&#60var_name&#62 ➜ The name you want to give to the variable.</p>
+            <p style="padding-top: 1%;">&#60value&#62 ➜ Optional. The value to store in the variable.</p>
         </div>
     </body>
 </html>

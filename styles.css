@@ -22,18 +22,18 @@
     --install-button-color-hover: #565050;
     --install-button-color-pressed: #504e4e;
 
-    --codeblock-background-color: #2b2b2b;
-    --code-type-color: #76006b;
-    --code-func-word-color: #e6d865;
-    --code-var-word-color: #55d9ef;
+    --codeblock-background-color: #1f1f1f;
+    --code-type-color: #3bc9b0;
+    --code-func-word-color: #dcdc9f;
+    --code-var-word-color: #69cefe;
     --code-parenthesis-color: #c6c0c0;
     --code-operator-color: #e32929;
-    --code-number-color: #56b43d;
-    --code-macro-color: #898989;
-    --code-key-value-color: #152eaa;
-    --code-commentary-color: #447c4d;
-    --code-characters-color: #9c8130;
-    --code-keyword-color: #dc56a3;
+    --code-number-color: #b5cea8;
+    --code-macro-color: #d5852c;
+    --code-key-value-color: #569cd6;
+    --code-commentary-color: #6a9953;
+    --code-characters-color: #ce9178;
+    --code-keyword-color: #c586c0;
 }
 
 * {
@@ -126,6 +126,7 @@
 .menu ul {
     padding-top: 3%;
     list-style: none;
+    padding-left: 0%;
 }
   
 .menu li a {
@@ -150,12 +151,9 @@
     background: var(--menu-select-color-hover);
 }
 
-.submenu {
-    padding-left: 15%;
-}
-
 .submenu li > a {
     padding: 0px;
+    padding-left: 15%;
     font-size: large;
 }
   
@@ -241,7 +239,7 @@ table {
 }
 
 pre {
-    font-family: 'Segoe UI';
+    font-family: 'Arial';
     font-size: large;
     font-weight: 700;
 }
@@ -288,4 +286,15 @@ pre {
 
 .code-keyword {
     color: var(--code-keyword-color);
+}
+
+ul {
+    padding-left: 5%;
+    line-height: 1.5em;
+}
+
+li {
+    color: var(--content-color);
+    font-family: lobster;
+    font-size: x-large;
 }
