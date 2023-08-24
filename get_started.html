@@ -28,8 +28,9 @@
                 <ul class="submenu">
                     <li><a href="#datatypes">⊳ data types</a></li>
                     <li><a href="#variables">⊳ variables</a></li>
+                    <li><a href="#functions">⊳ functions</a></li>
                 </ul>
-                <li><a href="libraries.html">▸ Libraries</a></li>
+                <li><a href="code_examples.html">▸ Code examples</a></li>
             </ul>
         </div>
 
@@ -159,12 +160,39 @@
                 </tr>
             </table>
 
+            <p>Examples:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-commentary">// Numbers (you can use '_' to add space)</pre> </div>
+                <div class="codeline"> <pre class="code-number">12   12_345   -9   ...                               </pre> <pre class="code-commentary">// basic integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0b11_00   -0b11   0b1100_0101   ...    </pre> <pre class="code-commentary">// binary integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0o17   0o23_76   ...                              </pre> <pre class="code-commentary">// octal integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0x7F   0x5a7f   0x54_de23   ...            </pre> <pre class="code-commentary">// hexadecimal integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">12.34   1.2_345   -65.12   ...                 </pre> <pre class="code-commentary">// decimal numbers</pre> </div>
+                <div class="codeline"> <pre class="code-number">1e+23   -6.2e-54   56e-12_456   ...       </pre> <pre class="code-commentary">// scientific numbers</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Booleans</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">false   true</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Characters (can store only 1 character)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'a'   '²'   '¤'   ...                                </pre> <pre class="code-commentary">// Basic characters ()</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\B110101'  ...                                </pre> <pre class="code-commentary">// binary characters (max 32 bits)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\o2371'   ...                                   </pre> <pre class="code-commentary">// octal characters (max 11 octal if first octal &#60= 3, else 10 octal)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\x1efa'   '\u34df45'   ...                </pre> <pre class="code-commentary">// hexadecimal characters (max 8 hexadecimal digit)</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Strings (can store multiple characters)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">""   "élève"   "\xe282ac £ù"   "multi-\nline"   ...</pre> </div>
+            </div>
+
             <h1 id="variables">Variables in seabow:</h1>
             <p>In seabow, you can declare variables which allows you to store values like this:</p>
             
             <div class="codeblock">
                 <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62</pre> <pre class="code-syntax">;</pre> </div>
                 <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62  </pre> <pre class="code-operator">=  </pre> <pre class="code-syntax">&#60value&#62</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">&#60var_name&#62  </pre> <pre class="code-operator">=  </pre> <pre class="code-syntax">&#60value&#62</pre> <pre class="code-syntax">;</pre> </div>
             </div>
 
             <p>&#60modifiers&#62 ➜ Optional. Used to modify usability of the variable.</p>
@@ -175,6 +203,13 @@
             <p style="padding-top: 1%;">&#60type&#62 ➜ The type of data you want to store in the variable.</p>
             <p style="padding-top: 1%;">&#60var_name&#62 ➜ The name you want to give to the variable.</p>
             <p style="padding-top: 1%;">&#60value&#62 ➜ Optional. The value to store in the variable.</p>
+            
+            <p style="padding-top: 2%;">Here an example of how use variables:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">const  </pre> <pre class="code-type">double  </pre> <pre class="code-var-word">double_var  </pre> <pre class="code-operator">=  </pre> <pre class="code-number">12.34e+3</pre> <pre class="code-syntax">;</pre> </div>
+            </div>
+
+            <h1 id="functions">Functions in seabow:</h1>
         </div>
     </body>
 </html>

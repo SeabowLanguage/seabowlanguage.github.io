@@ -179,6 +179,17 @@ h1 {
     padding-left: 2%;
 }
 
+h1::before {
+    content: "";
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: var(--content-color);
+    border-style: outset;
+    border-width: 2px;
+}
+
 a {
     text-decoration-color: var(--link-color);
     color: var(--link-color);
@@ -282,6 +293,10 @@ pre {
 
 .code-characters {
     color: var(--code-characters-color);
+}
+
+.code-characters-special {
+    
 }
 
 .code-keyword {
