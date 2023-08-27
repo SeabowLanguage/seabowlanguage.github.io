@@ -29,6 +29,7 @@
                     <li><a href="#datatypes">⊳ data types</a></li>
                     <li><a href="#variables">⊳ variables</a></li>
                     <li><a href="#functions">⊳ functions</a></li>
+                    <li><a href="#conditionals">⊳ conditionals</a></li>
                 </ul>
                 <li><a href="code_examples.html">▸ Code examples</a></li>
             </ul>
@@ -207,9 +208,46 @@
             <p style="padding-top: 2%;">Here an example of how use variables:</p>
             <div class="codeblock">
                 <div class="codeline"> <pre class="code-key-value">const  </pre> <pre class="code-type">double  </pre> <pre class="code-var-word">double_var  </pre> <pre class="code-operator">=  </pre> <pre class="code-number">12.34e+3</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-type">ldouble  </pre> <pre class="code-var-word">other_var  </pre> <pre class="code-operator">=  </pre> <pre class="code-var-word">double_var  </pre> <pre class="code-operator">*  </pre> <pre class="code-number">2.75</pre> <pre class="code-syntax">;</pre> </div>
             </div>
 
             <h1 id="functions">Functions in seabow:</h1>
+
+            <p>In seabow, you can declare functions which allows you to organize code and reuse it. Functions are declare like this:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-func-word">&#60function_name&#62</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">&#60args&#62</pre> <pre class="code-syntax">) {</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">    &#60body - statements&#62</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">}</pre> </div>
+            </div>
+
+            <p><br><br>Here a simple example of a function:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-type">void  </pre> <pre class="code-func-word">print_anything</pre> <pre class="code-syntax">(</pre> <pre class="code-type">string  </pre> <pre class="code-var-word">beggin</pre> <pre class="code-syntax">,  </pre> <pre class="code-type">uint  </pre> <pre class="code-var-word">number</pre> <pre class="code-operator">=</pre> <pre class="code-number">10</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">args</pre> <pre class="code-syntax">) {</pre> </div>
+                <div class="codeline"> <pre class="code-func-word">    print</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">beggin</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">number</pre> <pre class="code-syntax">);</pre> </div>
+                <div class="codeline"> <pre class="code-keyword">    foreach</pre> <pre class="code-syntax">(</pre> <pre class="code-type">any  </pre> <pre class="code-var-word">var  </pre> <pre class="code-keyword">in  </pre> <pre class="code-var-word">args</pre> <pre class="code-syntax">)</pre> </div>
+                <div class="codeline"> <pre class="code-func-word">        print</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">var</pre> <pre class="code-syntax">);</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">}</pre> </div>
+            </div>
+
+            <ul>
+                <li>'void' specify that the function return nothing (i.e. null).</li>
+                <li>'number' have a default value (10), so it can not be placed before last argument that have not a default value.</li>
+                <li>'args' specify that the function get multiple arguments and can not be placed before any other argument.</li>
+                <li>A 'main' function is mandatory if you want to interprete or compile a seabow file.</li>
+            </ul>
+
+            <p><br><br>Then you can call this function:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-func-word">print_anything</pre> <pre class="code-syntax">(</pre> <pre class="code-characters">"Beggin: "</pre> <pre class="code-syntax">,  </pre> <pre class="code-number">25</pre> <pre class="code-syntax">,  </pre> <pre class="code-characters">'µ'</pre> <pre class="code-syntax">,  </pre> <pre class="code-number">23.567</pre> <pre class="code-syntax">);</pre> </div>
+            </div>
+            <p>The first two values are respectively the values given to 'beggin' and 'number'.<br>The last two values are store in the 'args' argument.</p>
+
+            <h1 id="conditionals">Conditionals in seabow</h1>
+
+            <p>Conditionals can be used to execute different block of code depending of entry conditions. It can be declared like this:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-keyword">if </pre> <pre class="code-syntax">(</pre> <pre class="code-number">123</pre> </div>
+            </div>
         </div>
     </body>
 </html>
