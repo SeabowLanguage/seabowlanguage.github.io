@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="assets/seabow.ico">
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="header-left">
+                <img src="assets/seabow.png" id="header-icon" class="header-icon" onclick="window.open('https://github.com/SeabowLanguage/seabow', '_blank');">
+            </div>
+
+            <div class="header-middle">
+                <p>Seabow Documentation</p>
+            </div>
+
+            <div class="header-right">
+                <a href="index.html#installation">Install</a>
+            </div>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">• Home</a></li>
+                <li class="menu-selected"><a href="#">▾ Get Started</a></li>
+                <ul class="submenu">
+                    <li><a href="#datatypes">⊳ data types</a></li>
+                    <li><a href="#variables">⊳ variables</a></li>
+                    <li><a href="#functions">⊳ functions</a></li>
+                    <li><a href="#conditionals">⊳ conditionals</a></li>
+                </ul>
+                <li><a href="code_examples.html">▸ Code examples</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1 id="datatypes">Seabow data types:</h1>
+            <p>Data types are used to store many kind of data in different form. Here all the primitive types of seabow (i.e basic types).</p>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Memory</th>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>a signed 8-bit integer</td>
+                    <td>1o (-128 ↔ 127)</td>
+                </tr>
+                <tr>
+                    <td>ubyte</td>
+                    <td>an unsigned 8-bit integer</td>
+                    <td>1o (0 ↔ 255)</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>a signed 16-bit integer</td>
+                    <td>2o (-32,768 ↔ 32,767)</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>an unsigned 16-bit integer</td>
+                    <td>2o (0 ↔ 65,535)</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>a signed 32-bit integer</td>
+                    <td>4o (-2,147,483,648 ↔ 2,147,483,647)</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>an unsigned 32-bit integer</td>
+                    <td>4o (0 ↔ 4,294,967,295)</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>a signed 64-bit integer</td>
+                    <td>8o (-9,223,372,036,854,775,808 ↔ 9,223,372,036,854,775,808)</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>an unsigned 64-bit integer</td>
+                    <td>8o (0 ↔ 18,446,744,073,709,551,615)</td>
+                </tr>
+                <tr>
+                    <td>int128</td>
+                    <td>a signed 128-bit integer</td>
+                    <td>16o (≈ -1,701 x 10³⁸ ↔ ≈ 1,701 x 10³⁸)</td>
+                </tr>
+                <tr>
+                    <td>uint128</td>
+                    <td>an unsigned 128-bit integer</td>
+                    <td>16o (0 ↔ ≈ 3,403 x 10³⁸)</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>a 32-bit decimal number</td>
+                    <td>4o (6 decimal digits)</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>a 64-bit decimal number</td>
+                    <td>8o (15 decimal digits)</td>
+                </tr>
+                <tr>
+                    <td>ldouble</td>
+                    <td>a 128-bit decimal number</td>
+                    <td>16o (18 decimal digits)</td>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>a boolean value</td>
+                    <td>1o (true or false)</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>a UTF-32 character</td>
+                    <td>4o (any simple character)</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>a sequence of UTF-8 characters</td>
+                    <td>1o x number of characters ("abc", "平仮名, ひらがな")</td>
+                </tr>
+                <tr>
+                    <td>error</td>
+                    <td>a seabow error that notices an unexpected thing happened</td>
+                    <td>store an error name, details, error's line and error's column</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>type of a seabow value</td>
+                    <td>1o (&#60byte&#62, &#60string&#62, ...)</td>
+                </tr>
+                <tr>
+                    <td>any</td>
+                    <td>represent a seabow value, regardless of type</td>
+                    <td>size of the seabow value</td>
+                </tr>
+                <tr>
+                    <td>array</td>
+                    <td>a sequence of seabow values of a specific type</td>
+                    <td>size of all seabow values stored</td>
+                </tr>
+                <tr>
+                    <td>list</td>
+                    <td>a resizable sequence of seabow values of a specific type</td>
+                    <td>size of all seabow values stored</td>
+                </tr>
+                <tr>
+                    <td>dict</td>
+                    <td>a resizable sequence of key-value relation of specific types</td>
+                    <td>size of all key-value stored</td>
+                </tr>
+                <tr>
+                    <td>function</td>
+                    <td>a sequence of seabow line-code with arguments and returned values</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <p>Examples:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-commentary">// Numbers (you can use '_' to add space)</pre> </div>
+                <div class="codeline"> <pre class="code-number">12   12_345   -9   ...                               </pre> <pre class="code-commentary">// basic integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0b11_00   -0b11   0b1100_0101   ...    </pre> <pre class="code-commentary">// binary integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0o17   0o23_76   ...                              </pre> <pre class="code-commentary">// octal integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">0x7F   0x5a7f   0x54_de23   ...            </pre> <pre class="code-commentary">// hexadecimal integers</pre> </div>
+                <div class="codeline"> <pre class="code-number">12.34   1.2_345   -65.12   ...                 </pre> <pre class="code-commentary">// decimal numbers</pre> </div>
+                <div class="codeline"> <pre class="code-number">1e+23   -6.2e-54   56e-12_456   ...       </pre> <pre class="code-commentary">// scientific numbers</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Booleans</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">false   true</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Characters (can store only 1 character)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'a'   '²'   '¤'   ...                                </pre> <pre class="code-commentary">// Basic characters ()</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\B110101'  ...                                </pre> <pre class="code-commentary">// binary characters (max 32 bits)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\o2371'   ...                                   </pre> <pre class="code-commentary">// octal characters (max 11 octal if first octal &#60= 3, else 10 octal)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">'\x1efa'   '\u34df45'   ...                </pre> <pre class="code-commentary">// hexadecimal characters (max 8 hexadecimal digit)</pre> </div>
+                <div class="codeline-break"></div>
+
+                <div class="codeline"> <pre class="code-commentary">// Strings (can store multiple characters)</pre> </div>
+                <div class="codeline"> <pre class="code-characters">""   "élève"   "\xe282ac £ù"   "multi-\nline"   ...</pre> </div>
+            </div>
+
+            <h1 id="variables">Variables in seabow:</h1>
+            <p>In seabow, you can declare variables which allows you to store values like this:</p>
+            
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62  </pre> <pre class="code-operator">=  </pre> <pre class="code-syntax">&#60value&#62</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-var-word">&#60var_name&#62</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">&#60var_name&#62  </pre> <pre class="code-operator">=  </pre> <pre class="code-syntax">&#60value&#62</pre> <pre class="code-syntax">;</pre> </div>
+            </div>
+
+            <p>&#60modifiers&#62 ➜ Optional. Used to modify usability of the variable.</p>
+            <ul>
+                <li>const: used to specify that the variable can not be reassigned.</li>
+                <li>global: Used to specify that the variable can be used everywhere on the code.</li>
+            </ul>
+            <p style="padding-top: 1%;">&#60type&#62 ➜ The type of data you want to store in the variable.</p>
+            <p style="padding-top: 1%;">&#60var_name&#62 ➜ The name you want to give to the variable.</p>
+            <p style="padding-top: 1%;">&#60value&#62 ➜ Optional. The value to store in the variable.</p>
+            
+            <p style="padding-top: 2%;">Here an example of how use variables:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">const  </pre> <pre class="code-type">double  </pre> <pre class="code-var-word">double_var  </pre> <pre class="code-operator">=  </pre> <pre class="code-number">12.34e+3</pre> <pre class="code-syntax">;</pre> </div>
+                <div class="codeline"> <pre class="code-type">ldouble  </pre> <pre class="code-var-word">other_var  </pre> <pre class="code-operator">=  </pre> <pre class="code-var-word">double_var  </pre> <pre class="code-operator">*  </pre> <pre class="code-number">2.75</pre> <pre class="code-syntax">;</pre> </div>
+            </div>
+
+            <h1 id="functions">Functions in seabow:</h1>
+
+            <p>In seabow, you can declare functions which allows you to organize code and reuse it. Functions are declare like this:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-key-value">&#60modifiers&#62  </pre> <pre class="code-type">&#60type&#62  </pre> <pre class="code-func-word">&#60function_name&#62</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">&#60args&#62</pre> <pre class="code-syntax">) {</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">    &#60body - statements&#62</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">}</pre> </div>
+            </div>
+
+            <p><br><br>Here a simple example of a function:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-type">void  </pre> <pre class="code-func-word">print_anything</pre> <pre class="code-syntax">(</pre> <pre class="code-type">string  </pre> <pre class="code-var-word">beggin</pre> <pre class="code-syntax">,  </pre> <pre class="code-type">uint  </pre> <pre class="code-var-word">number</pre> <pre class="code-operator">=</pre> <pre class="code-number">10</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">args</pre> <pre class="code-syntax">) {</pre> </div>
+                <div class="codeline"> <pre class="code-func-word">    print</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">beggin</pre> <pre class="code-syntax">,  </pre> <pre class="code-var-word">number</pre> <pre class="code-syntax">);</pre> </div>
+                <div class="codeline"> <pre class="code-keyword">    foreach</pre> <pre class="code-syntax">(</pre> <pre class="code-type">any  </pre> <pre class="code-var-word">var  </pre> <pre class="code-keyword">in  </pre> <pre class="code-var-word">args</pre> <pre class="code-syntax">)</pre> </div>
+                <div class="codeline"> <pre class="code-func-word">        print</pre> <pre class="code-syntax">(</pre> <pre class="code-var-word">var</pre> <pre class="code-syntax">);</pre> </div>
+                <div class="codeline"> <pre class="code-syntax">}</pre> </div>
+            </div>
+
+            <ul>
+                <li>'void' specify that the function return nothing (i.e. null).</li>
+                <li>'number' have a default value (10), so it can not be placed before last argument that have not a default value.</li>
+                <li>'args' specify that the function get multiple arguments and can not be placed before any other argument.</li>
+                <li>A 'main' function is mandatory if you want to interprete or compile a seabow file.</li>
+            </ul>
+
+            <p><br><br>Then you can call this function:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-func-word">print_anything</pre> <pre class="code-syntax">(</pre> <pre class="code-characters">"Beggin: "</pre> <pre class="code-syntax">,  </pre> <pre class="code-number">25</pre> <pre class="code-syntax">,  </pre> <pre class="code-characters">'µ'</pre> <pre class="code-syntax">,  </pre> <pre class="code-number">23.567</pre> <pre class="code-syntax">);</pre> </div>
+            </div>
+            <p>The first two values are respectively the values given to 'beggin' and 'number'.<br>The last two values are store in the 'args' argument.</p>
+
+            <h1 id="conditionals">Conditionals in seabow</h1>
+
+            <p>Conditionals can be used to execute different block of code depending of entry conditions. It can be declared like this:</p>
+            <div class="codeblock">
+                <div class="codeline"> <pre class="code-keyword">if </pre> <pre class="code-syntax">(</pre> <pre class="code-number">123</pre> </div>
+            </div>
+        </div>
+    </body>
+</html>
