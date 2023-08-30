@@ -32,6 +32,7 @@
                 <a class="sublink" href="#enums">⊳ enumerations</a>
                 <a class="sublink" href="#structs">⊳ structures</a>
                 <a class="sublink" href="#c-objects">⊳ class / objects</a>
+                <a class="sublink" href="#other-sp-types">⊳ other special types</a>
                 <a class="sublink" href="#macros">⊳ macros</a>
                 <a class="sublink" href="#sbw-cmd">⊳ seabow command</a>
                 <a href="./code_examples.html">▸ Code examples</a>
@@ -42,6 +43,169 @@
 
         <div class="content">
             <h1 class="animated-text" id="data-types">Seabow data types</h1>
+            <div class="frame frame-left">
+                <p>List of seabow data types:</p>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+
+                    <tr>
+                        <td>byte</td>
+                        <td>A signed 8-bit integer</td>
+                        <td>-128 ⟷ 127</td>
+                    </tr>
+
+                    <tr>
+                        <td>ubyte</td>
+                        <td>An unsigned 8-bit integer</td>
+                        <td>0 ⟷ 255</td>
+                    </tr>
+
+                    <tr>
+                        <td>short</td>
+                        <td>A signed 16-bit integer</td>
+                        <td>-32 768 ⟷ 32 767</td>
+                    </tr>
+
+                    <tr>
+                        <td>ushort</td>
+                        <td>An unsigned 16-bit integer</td>
+                        <td>0 ⟷ 65 535</td>
+                    </tr>
+
+                    <tr>
+                        <td>int</td>
+                        <td>A signed 32-bit integer</td>
+                        <td>-2 147 483 648 ⟷ 2 147 483 647</td>
+                    </tr>
+
+                    <tr>
+                        <td>uint</td>
+                        <td>An unsigned 32-bit integer</td>
+                        <td>0 ⟷ 4 294 967 295</td>
+                    </tr>
+
+                    <tr>
+                        <td>long</td>
+                        <td>A signed 64-bit integer</td>
+                        <td>-9 223 372 036 854 775 808 ⟷ 9 223 372 036 854 775 807</td>
+                    </tr>
+
+                    <tr>
+                        <td>ulong</td>
+                        <td>An unsigned 64-bit integer</td>
+                        <td>0 ⟷ 18 446 744 073 709 551 615</td>
+                    </tr>
+
+                    <tr>
+                        <td>int128</td>
+                        <td>A signed 128-bit integer</td>
+                        <td>≈ -1.701 x 10³⁸ ⟷ ≈ 1.701 x 10³⁸</td>
+                    </tr>
+
+                    <tr>
+                        <td>uint128</td>
+                        <td>An unsigned 128-bit integer</td>
+                        <td>0 ⟷ ≈ 3.403 x 10³⁸</td>
+                    </tr>
+
+                    <tr>
+                        <td>float</td>
+                        <td>A 32-bit decimal number</td>
+                        <td>1.175494 x 10⁻³⁸ ⟷ 3.402824 x 10³⁸ with 6 decimal digits</td>
+                    </tr>
+
+                    <tr>
+                        <td>double</td>
+                        <td>A 64-bit decimal number</td>
+                        <td>2.225073858507201 x 10⁻³⁰⁸ ⟷ 1.797693134862316 x 10³⁰⁸ with 15 decimal digits</td>
+                    </tr>
+
+                    <tr>
+                        <td>ldouble</td>
+                        <td>A 128-bit decimal number</td>
+                        <td>3.3621 x 10⁻⁴⁹³² ⟷ 1.18973 x 10⁴⁹³² with 18 decimal digits</td>
+                    </tr>
+
+                    <tr>
+                        <td>bool</td>
+                        <td>A 8-bit boolean value</td>
+                        <td>true or false</td>
+                    </tr>
+
+                    <tr>
+                        <td>char</td>
+                        <td>A UTF-32 (32-bit) character</td>
+                        <td>All existing character expected non UTF-32 specific character</td>
+                    </tr>
+
+                    <tr>
+                        <td>string</td>
+                        <td>A chain of multiple UTF-8 (8-bit) characters</td>
+                        <td>Can store all existing characters</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="frame frame-right">
+                <p>Special data types:</p>
+                <table>
+                    <tr>
+                        <th>Special type</th>
+                        <th>Description</th>
+                        <th>Examples</th>
+                    </tr>
+
+                    <tr>
+                        <td>reference</td>
+                        <td>A reference to a seabow variable, used when you want to pass the variable to a function and not a copy of it</td>
+                        <td>reference: int&, any&, ...<br>get ref: &variable</td>
+                    </tr>
+
+                    <tr>
+                        <td>null</td>
+                        <td>A non-initialized value that can be set to any nullable types</td>
+                        <td>null</td>
+                    </tr>
+
+                    <tr>
+                        <td>not-null</td>
+                        <td>A non-nullable value that can not be set to null</td>
+                        <td>Just add a '!' after a type<br>int!, any!, ...</td>
+                    </tr>
+
+                    <tr>
+                        <td>not-null reference</td>
+                        <td>A reference to a non-nullable value</td>
+                        <td>Add a '!' and a '&' after a type<br>int&!, any!&, ...</td>
+                    </tr>
+
+                    <tr>
+                        <td>structures</td>
+                        <td>An organization of seabow values that allow user to create a new type</td>
+                        <td>Any organization of seabow values</td>
+                    </tr>
+
+                    <tr>
+                        <td>enumerations</td>
+                        <td>An enumeration of multiple words that allow user to create a new type that stored this multiple words</td>
+                        <td>Any enumeration of words</td>
+                    </tr>
+
+                    <tr>
+                        <td>class / objects</td>
+                        <td>An organization of seabow values with functionalities and more that allow user to create a new type</td>
+                        <td>Any organization of seabow values with functionalities and more</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="frame frame-left">
+                <p>Data types examples:</p>
+            </div>
 
             <hr>
             <h1 class="animated-text" id="variables">Variables in seabow</h1>
@@ -77,10 +241,15 @@
             <h1 class="animated-text" id="c-objects">Class and objects in seabow</h1>
 
             <hr>
+            <h1 class="animated-text" id="other-sp-types">Other special types in seabow</h1>
+
+            <hr>
             <h1 class="animated-text" id="macros">Modify seabow command with macros</h1>
 
             <hr>
             <h1 class="animated-text" id="sbw-cmd">How to use the seabow command</h1>
         </div>
     </body>
+
+    <script src="./script.js"></script>
 </html>

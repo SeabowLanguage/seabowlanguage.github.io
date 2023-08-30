@@ -29,6 +29,8 @@
     --code-variable-color: #69cefe;
     --code-number-color: #b5cea8;
     --code-character-color: #ce916a;
+
+    --frame-text-color: #212134;
 }
 
 * {
@@ -183,6 +185,18 @@ ul {
     width: 60%;
     padding: 1%;
     background: var(--frame-background-color);
+    margin: 1% 0px;
+}
+
+.frame p {
+    color: var(--frame-text-color);
+    font-size: 2em;
+}
+
+.frame table {
+    margin: 0px;
+    width: 100%;
+    color: var(--frame-text-color);
 }
 
 .frame-left {
@@ -299,6 +313,10 @@ td, th {
     border-style: solid;
     border-width: 2px;
     text-align: center;
+}
+
+th {
+    font-size: 1.5em;
 }
 
 td a {

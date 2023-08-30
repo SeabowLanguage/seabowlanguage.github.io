@@ -31,13 +31,18 @@ function update_all() {
         const rect = _frames[i].getBoundingClientRect();
         if (window.innerHeight > rect.top + rect.height / 3) {
             _frames[i].style.animation = "frame-" + direction + "-appear 2s ease-in-out forwards";
-        } else if ((direction === "left" && rect.left > -50) || (direction === "right" && rect.right > -150)) {
+        } else {
             _frames[i].style.animation = "frame-" + direction + "-disappear 2s ease-in-out forwards";
         }
     }
 
     for (let i=0; i<animated_texts.length; i++) {
-
+        const rect = animated_texts[i].getBoundingClientRect();
+        if (window.innerHeight > rect.top + rect.height / 2) {
+            animated_texts[i].style.animation = "text-appear 2s ease-in-out forwards";
+        } else {
+            animated_texts[i].style.animation = "text-disappear 2s ease-in-out forwards";
+        }
     }
 }
 
