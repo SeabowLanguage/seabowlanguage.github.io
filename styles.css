@@ -29,6 +29,8 @@
     --code-variable-color: #69cefe;
     --code-number-color: #b5cea8;
     --code-character-color: #ce916a;
+    --code-special_character-color: #ccba7d;
+    --code-keyword-color: #569cd6;
 
     --frame-text-color: #212134;
 }
@@ -188,9 +190,14 @@ ul {
     margin: 1% 0px;
 }
 
-.frame p {
+.frame p:nth-child(1) {
     color: var(--frame-text-color);
     font-size: 2em;
+}
+
+.frame p:not(:nth-child(1)) {
+    color: var(--frame-text-color);
+    font-size: 1em;
 }
 
 .frame table {
@@ -254,6 +261,10 @@ ul {
     display: flex;
 }
 
+.codeline-break {
+    padding: 1% 0%;
+}
+
 pre {
     font-size: 1em;
 }
@@ -296,6 +307,14 @@ pre {
 
 .code-character {
     color: var(--code-character-color);
+}
+
+.code-keyword {
+    color: var(--code-keyword-color);
+}
+
+.code-sp-character {
+    color: var(--code-special_character-color);
 }
 
 table {

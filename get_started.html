@@ -147,6 +147,24 @@
                         <td>A chain of multiple UTF-8 (8-bit) characters</td>
                         <td>Can store all existing characters</td>
                     </tr>
+
+                    <tr>
+                        <td>array</td>
+                        <td>A non-mutable list of seabow values</td>
+                        <td>Can store all type of seabow values</td>
+                    </tr>
+
+                    <tr>
+                        <td>list</td>
+                        <td>A mutable list of seabow values</td>
+                        <td>Can store all type of seabow values</td>
+                    </tr>
+
+                    <tr>
+                        <td>dict</td>
+                        <td>A key-value mutable list of seabow values</td>
+                        <td>Keys and values can be of all type of seabow values</td>
+                    </tr>
                 </table>
             </div>
 
@@ -163,6 +181,18 @@
                         <td>reference</td>
                         <td>A reference to a seabow variable, used when you want to pass the variable to a function and not a copy of it</td>
                         <td>reference: int&, any&, ...<br>get ref: &variable</td>
+                    </tr>
+
+                    <tr>
+                        <td>function</td>
+                        <td>A block of multiple seabow statements</td>
+                        <td>All builtin-functions or user-defined functions</td>
+                    </tr>
+
+                    <tr>
+                        <td>error</td>
+                        <td>A seabow execution error</td>
+                        <td>ZeroDivisionError ConversionError <br>error("NewError", "Description")</td>
                     </tr>
 
                     <tr>
@@ -205,6 +235,50 @@
 
             <div class="frame frame-left">
                 <p>Data types examples:</p>
+                <div class="codeblock">
+                    <div class="codeline"> <pre class="code-comment">// Integers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">12  -65  12_345  -1_234_567  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Decimal numbers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">12.3  -65.12  1_234.6_789  -0.9_999  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Scientific numbers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">1e+23  -3e-65  2e-1_000  1.2e+9  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Binary, octal and hexadecimal numbers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">0b1011_1100  0b1  0b11_00  0o75  0o54_76  0xaf  0xd672_f12c  0xFFD1  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// 128-bit integers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">12L  -654L  12_345_678_999_000L  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// ldouble numbers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">1.23D  123D  1e+345D  -65.34e-78D  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Boolean values</pre> </div>
+                    <div class="codeline"> <pre class="code-keyword">true  false</pre></div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Basic characters</pre> </div>
+                    <div class="codeline"> <pre class="code-character">'a'  'È'  '仮'  '😂'  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Binary, octal and hexadecimal characters</pre> </div>
+                    <div class="codeline"> <pre class="code-character">'</pre> <pre class="code-sp-character">\B011011</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\o7754</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\xF09F9298</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\ue282AC</pre> <pre class="code-character">'  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Special characters</pre> </div>
+                    <div class="codeline"> <pre class="code-character">'</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\t</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\0</pre> <pre class="code-character">'  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Strings (can use all characters)</pre> </div>
+                    <div class="codeline"> <pre class="code-character">"Hello, World!"  "غيوم -> </pre> <pre class="code-sp-character">\xF09F98B6\xE2808DF0\u9F8CABEF\uB88F</pre> <pre class="code-character">"  "Hello</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">World"  ...</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Arrays</pre> </div>
+                    <div class="codeline"> <pre class="code-syntax1">[ ]  [</pre> <pre class="code-number">123</pre> <pre class="code-none">, </pre> <pre class="code-character">"123"</pre> <pre class="code-syntax1">]</pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Lists</pre> </div>
+                    <div class="codeline"> <pre class=""></pre> </div>
+                    <div class="codeline-break"></div>
+                    <div class="codeline"> <pre class="code-comment">// Dicts</pre> </div>
+                    <div class="codeline"> <pre class=""></pre> </div>
+                </div>
+                <p>Note that '_' can be placed at all position on a number.</p>
             </div>
 
             <hr>
