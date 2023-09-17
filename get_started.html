@@ -44,241 +44,238 @@
         <div class="content">
             <h1 class="animated-text" id="data-types">Seabow data types</h1>
             <div class="frame frame-left">
-                <p>List of seabow data types:</p>
+                <h1>Basic data-types</h1>
+                <p>In seabow, there are many basic types that can be used to store data.</p>
+
                 <table>
                     <tr>
-                        <th>Type</th>
-                        <th>Description</th>
-                        <th>Examples</th>
+                        <th>type</th>
+                        <th>description</th>
+                        <th>examples</th>
+                    </tr>
+
+                    <tr>
+                        <td>void</td>
+                        <td>Specify that a function returns nothing</td>
+                        <td>func f(): void</td>
                     </tr>
 
                     <tr>
                         <td>byte</td>
-                        <td>A signed 8-bit integer</td>
-                        <td>-128 ⟷ 127</td>
+                        <td>Store a signed 8-bit integer</td>
+                        <td>-128 ⇿ 127</td>
                     </tr>
 
                     <tr>
                         <td>ubyte</td>
-                        <td>An unsigned 8-bit integer</td>
-                        <td>0 ⟷ 255</td>
+                        <td>Store an unsigned 8-bit integer</td>
+                        <td>0 ⇿ 255</td>
                     </tr>
 
                     <tr>
                         <td>short</td>
-                        <td>A signed 16-bit integer</td>
-                        <td>-32 768 ⟷ 32 767</td>
+                        <td>Store a signed 16-bit integer</td>
+                        <td>-32 768 ⇿ 32 767</td>
                     </tr>
 
                     <tr>
                         <td>ushort</td>
-                        <td>An unsigned 16-bit integer</td>
-                        <td>0 ⟷ 65 535</td>
+                        <td>Store an unsigned 16-bit integer</td>
+                        <td>0 ⇿ 65 535</td>
                     </tr>
 
                     <tr>
                         <td>int</td>
-                        <td>A signed 32-bit integer</td>
-                        <td>-2 147 483 648 ⟷ 2 147 483 647</td>
+                        <td>Store a signed 32-bit integer</td>
+                        <td>-2 147 483 648 ⇿ 2 147 483 647</td>
                     </tr>
 
                     <tr>
                         <td>uint</td>
-                        <td>An unsigned 32-bit integer</td>
-                        <td>0 ⟷ 4 294 967 295</td>
+                        <td>Store an unsigned 32-bit integer</td>
+                        <td>0 ⇿ 4 294 967 295</td>
                     </tr>
 
                     <tr>
                         <td>long</td>
-                        <td>A signed 64-bit integer</td>
-                        <td>-9 223 372 036 854 775 808 ⟷ 9 223 372 036 854 775 807</td>
+                        <td>Store a signed 64-bit integer</td>
+                        <td>-2³¹ ⇿ 2³¹ - 1</td>
                     </tr>
 
                     <tr>
                         <td>ulong</td>
-                        <td>An unsigned 64-bit integer</td>
-                        <td>0 ⟷ 18 446 744 073 709 551 615</td>
+                        <td>Store an unsigned 64-bit integer</td>
+                        <td>0 ⇿ 2³² - 1</td>
                     </tr>
 
                     <tr>
                         <td>int128</td>
-                        <td>A signed 128-bit integer</td>
-                        <td>≈ -1.701 x 10³⁸ ⟷ ≈ 1.701 x 10³⁸</td>
+                        <td>Store a signed 128-bit integer</td>
+                        <td>-2¹²⁷ ⇿ 2¹²⁷ - 1</td>
                     </tr>
 
                     <tr>
                         <td>uint128</td>
-                        <td>An unsigned 128-bit integer</td>
-                        <td>0 ⟷ ≈ 3.403 x 10³⁸</td>
+                        <td>Store an unsigned 128-bit integer</td>
+                        <td>0 ⇿ 2¹²⁸ - 1</td>
+                    </tr>
+
+                    <tr>
+                        <td>half</td>
+                        <td>Store a 16-bit decimal number</td>
+                        <td>low decimal number</td>
                     </tr>
 
                     <tr>
                         <td>float</td>
-                        <td>A 32-bit decimal number</td>
-                        <td>1.175494 x 10⁻³⁸ ⟷ 3.402824 x 10³⁸ with 6 decimal digits</td>
+                        <td>Store a 32-bit decimal number</td>
+                        <td>basic decimal number</td>
                     </tr>
 
                     <tr>
                         <td>double</td>
-                        <td>A 64-bit decimal number</td>
-                        <td>2.225073858507201 x 10⁻³⁰⁸ ⟷ 1.797693134862316 x 10³⁰⁸ with 15 decimal digits</td>
+                        <td>Store a 64-bit decimal number</td>
+                        <td>big decimal number</td>
                     </tr>
 
                     <tr>
                         <td>ldouble</td>
-                        <td>A 128-bit decimal number</td>
-                        <td>3.3621 x 10⁻⁴⁹³² ⟷ 1.18973 x 10⁴⁹³² with 18 decimal digits</td>
+                        <td>Store a 128-bit decimal number</td>
+                        <td>very big decimal number</td>
                     </tr>
 
                     <tr>
                         <td>bool</td>
-                        <td>A 8-bit boolean value</td>
+                        <td>Store a boolean value</td>
                         <td>true or false</td>
                     </tr>
 
                     <tr>
                         <td>char</td>
-                        <td>A UTF-32 (32-bit) character</td>
-                        <td>All existing character expected non UTF-32 specific character</td>
+                        <td>Store an UTF-32 character</td>
+                        <td>All UTF-32 characters</td>
                     </tr>
 
                     <tr>
                         <td>string</td>
-                        <td>A chain of multiple UTF-8 (8-bit) characters</td>
-                        <td>Can store all existing characters</td>
+                        <td>Store an array of UTF-8 characters</td>
+                        <td>All existing characters</td>
+                    </tr>
+
+                    <tr>
+                        <td>type</td>
+                        <td>Store a type of data-type</td>
+                        <td>All existing types</td>
+                    </tr>
+
+                    <tr>
+                        <td>error</td>
+                        <td>Store a basic seabow error</td>
+                        <td>All defined seabow errors</td>
                     </tr>
 
                     <tr>
                         <td>array</td>
-                        <td>A non-mutable list of seabow values</td>
-                        <td>Can store all type of seabow values</td>
+                        <td>Store an immutable list of data</td>
+                        <td>A specific count of data</td>
                     </tr>
 
                     <tr>
                         <td>list</td>
-                        <td>A mutable list of seabow values</td>
-                        <td>Can store all type of seabow values</td>
+                        <td>Store a mutable list of data</td>
+                        <td>A resizable count of data</td>
                     </tr>
 
                     <tr>
                         <td>dict</td>
-                        <td>A key-value mutable list of seabow values</td>
-                        <td>Keys and values can be of all type of seabow values</td>
+                        <td>Store a mutable list of pairs of data</td>
+                        <td>A resizable count of pairs of data</td>
                     </tr>
                 </table>
             </div>
 
             <div class="frame frame-right">
-                <p>Special data types:</p>
-                <table>
-                    <tr>
-                        <th>Special type</th>
-                        <th>Description</th>
-                        <th>Examples</th>
-                    </tr>
-
-                    <tr>
-                        <td>reference</td>
-                        <td>A reference to a seabow variable, used when you want to pass the variable to a function and not a copy of it</td>
-                        <td>reference: int&, any&, ...<br>get ref: &variable</td>
-                    </tr>
-
-                    <tr>
-                        <td>function</td>
-                        <td>A block of multiple seabow statements</td>
-                        <td>All builtin-functions or user-defined functions</td>
-                    </tr>
-
-                    <tr>
-                        <td>error</td>
-                        <td>A seabow execution error</td>
-                        <td>ZeroDivisionError ConversionError <br>error("NewError", "Description")</td>
-                    </tr>
-
-                    <tr>
-                        <td>null</td>
-                        <td>A non-initialized value that can be set to any nullable types</td>
-                        <td>null</td>
-                    </tr>
-
-                    <tr>
-                        <td>not-null</td>
-                        <td>A non-nullable value that can not be set to null</td>
-                        <td>Just add a '!' after a type<br>int!, any!, ...</td>
-                    </tr>
-
-                    <tr>
-                        <td>not-null reference</td>
-                        <td>A reference to a non-nullable value</td>
-                        <td>Add a '!' and a '&' after a type<br>int&!, any!&, ...</td>
-                    </tr>
-
-                    <tr>
-                        <td>structures</td>
-                        <td>An organization of seabow values that allow user to create a new type</td>
-                        <td>Any organization of seabow values</td>
-                    </tr>
-
-                    <tr>
-                        <td>enumerations</td>
-                        <td>An enumeration of multiple words that allow user to create a new type that stored this multiple words</td>
-                        <td>Any enumeration of words</td>
-                    </tr>
-
-                    <tr>
-                        <td>class / objects</td>
-                        <td>An organization of seabow values with functionalities and more that allow user to create a new type</td>
-                        <td>Any organization of seabow values with functionalities and more</td>
-                    </tr>
-                </table>
+                <h1>Special data-types</h1>
+                <p>Seabow has a few special data-types such as:</p>
+                
+                <ul>
+                    <li>null ⇰ An empty value / nothing</li>
+                    <li>any ⇰ Can store all types of data</li>
+                    <li>reference ($) ⇰ Store the reference to another data</li>
+                    <li>notnullable (!) ⇰ Store data that can not be set to null</li>
+                    <li>function ⇰ Store data that represents a seabow function</li>
+                </ul>
             </div>
 
             <div class="frame frame-left">
-                <p>Data types examples:</p>
+                <h1>Data-types examples</h1>
+                <p>Here simple examples of values for different data-types:</p>
+                
                 <div class="codeblock">
-                    <div class="codeline"> <pre class="code-comment">// Integers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">12  -65  12_345  -1_234_567  ...</pre> </div>
+                    <div class="codeline"> <pre class="code-comment">//  Basic integers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">123  -654  0  12_345  -67_890  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Decimal numbers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">12.3  -65.12  1_234.6_789  -0.9_999  ...</pre> </div>
+                    
+                    <div class="codeline"> <pre class="code-comment">//  Binary integers (starts with '0b')</pre> </div>
+                    <div class="codeline"> <pre class="code-number">0b11_00  0b0101_0000  0b1  -0b111  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Scientific numbers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">1e+23  -3e-65  2e-1_000  1.2e+9  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Octal integers (starts with '0o')</pre> </div>
+                    <div class="codeline"> <pre class="code-number">0o76  -0o765_567  -0o1  0o123_45_6  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Binary, octal and hexadecimal numbers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">0b1011_1100  0b1  0b11_00  0o75  0o54_76  0xaf  0xd672_f12c  0xFFD1  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Hexadecimal integers (starts with '0x')</pre> </div>
+                    <div class="codeline"> <pre class="code-number">0xfe  -0xfd_12  0xfe12_45ac  -0xfbc  ...</pre> </div>
+                    <div class="codeline-break"> </div>
+                
+                    <div class="codeline"> <pre class="code-comment">//  Decimal numbers</pre> </div>
+                    <div class="codeline"> <pre class="code-number">-12.3_567  12e+32  -1E-1_23  12.3_4e+1_2  0.127  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// 128-bit integers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">12L  -654L  12_345_678_999_000L  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  (u)int128</pre> </div>
+                    <div class="codeline"> <pre class="code-number">12I  0b1111I  -987_654I  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// ldouble numbers</pre> </div>
-                    <div class="codeline"> <pre class="code-number">1.23D  123D  1e+345D  -65.34e-78D  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  ldouble</pre> </div>
+                    <div class="codeline"> <pre class="code-number">12L  1e+32L  -654.23L  1_234e-65L  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Boolean values</pre> </div>
-                    <div class="codeline"> <pre class="code-keyword">true  false</pre></div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Basic characters</pre> </div>
+                    <div class="codeline"> <pre class="code-character">'a'  '  '  '🦊'  'ÿ'  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Basic characters</pre> </div>
-                    <div class="codeline"> <pre class="code-character">'a'  'È'  '仮'  '😂'  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Special characters (starts with '\')</pre> </div>
+                    <div class="codeline"> <pre class="code-character">'</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\ue282ac</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\B1000000</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\o243</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\\</pre> <pre class="code-character">'  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Binary, octal and hexadecimal characters</pre> </div>
-                    <div class="codeline"> <pre class="code-character">'</pre> <pre class="code-sp-character">\B011011</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\o7754</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\xF09F9298</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\ue282AC</pre> <pre class="code-character">'  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Strings</pre> </div>
+                    <div class="codeline"> <pre class="code-character">"élève"  "Hello</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">World!"  "Two 🦊🦊"  "</pre> <pre class="code-sp-character">\uF09FA799\xF09F8FBF</pre> <pre class="code-character"> is powerful"  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Special characters</pre> </div>
-                    <div class="codeline"> <pre class="code-character">'</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\t</pre> <pre class="code-character">'  '</pre> <pre class="code-sp-character">\0</pre> <pre class="code-character">'  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Booleans</pre> </div>
+                    <div class="codeline"> <pre class="code-keyword">true  false</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Strings (can use all characters)</pre> </div>
-                    <div class="codeline"> <pre class="code-character">"Hello, World!"  "غيوم -> </pre> <pre class="code-sp-character">\xF09F98B6\xE2808DF0\u9F8CABEF\uB88F</pre> <pre class="code-character">"  "Hello</pre> <pre class="code-sp-character">\n</pre> <pre class="code-character">World"  ...</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Types</pre> </div>
+                    <div class="codeline"> <pre class="code-type">int  bool  array  any  </pre> <pre class="code-function">typeof</pre> <pre class="code-syntax1">(</pre> <pre class="code-variable">value</pre> <pre class="code-syntax1">)</pre> <pre class="code-type">  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Arrays</pre> </div>
-                    <div class="codeline"> <pre class="code-syntax1">[ ]  [</pre> <pre class="code-number">123</pre> <pre class="code-none">, </pre> <pre class="code-character">"123"</pre> <pre class="code-syntax1">]</pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">// Errors</pre> </div>
+                    <div class="codeline"> <pre class="code-type">error</pre> <pre class="code-syntax1">(</pre> <pre class="code-variable">name</pre> <pre class="code-none">,  </pre> <pre class="code-variable">details</pre> <pre class="code-syntax1">)  </pre>  <pre class="code-type">error</pre> <pre class="code-syntax1">(</pre> <pre class="code-variable">name</pre> <pre class="code-syntax1">)</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Lists</pre> </div>
-                    <div class="codeline"> <pre class=""></pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Arrays</pre> </div>
+                    <div class="codeline"> <pre class="code-syntax1">[</pre> <pre class="code-character">"abc"</pre> <pre class="code-none">,  </pre> <pre class="code-number">123</pre> <pre class="code-none">,  </pre> <pre class="code-keyword">true</pre> <pre class="code-syntax1">]</pre> <pre class="code-syntax1">  [</pre> <pre class="code-syntax2">[</pre> <pre class="code-number">456</pre> <pre class="code-none">,  </pre> <pre class="code-number">1e+43</pre> <pre class="code-syntax2">]</pre> <pre class="code-none">,  </pre> <pre class="code-keyword">null</pre> <pre class="code-syntax1">]  </pre> <pre class="code-syntax1">[ ]</pre> <pre class="code-none">  ...</pre> </div>
                     <div class="codeline-break"></div>
-                    <div class="codeline"> <pre class="code-comment">// Dicts</pre> </div>
-                    <div class="codeline"> <pre class=""></pre> </div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Lists</pre> </div>
+                    <div class="codeline"> <pre class="code-type">list</pre> <pre class="code-syntax1">(</pre> <pre class="code-number">123</pre> <pre class="code-none">,  </pre> <pre class="code-character">"string"</pre> <pre class="code-syntax1">)  </pre> <pre class="code-type">list</pre> <pre class="code-syntax1">(</pre> <pre class="code-syntax2">[</pre> <pre class="code-number">-980</pre> <pre class="code-none">,  </pre> <pre class="code-keyword">false</pre> <pre class="code-syntax2">]</pre> <pre class="code-none">,  </pre> <pre class="code-character">'  '</pre> <pre class="code-none">,  </pre> <pre class="code-type">list</pre> <pre class="code-syntax2">()</pre> <pre class="code-syntax1">)</pre> <pre class="code-none">  ...</pre> </div>
+                    <div class="codeline-break"></div>
+
+                    <div class="codeline"> <pre class="code-comment">//  Dicts</pre> </div>
+                    <div class="codeline"> <pre class="code-syntax1">[</pre> <pre class="code-character">'a'</pre> <pre class="code-none">:  </pre> <pre class="code-number">123</pre> <pre class="code-none">,  </pre> <pre class="code-number">1_234</pre> <pre class="code-none">:  </pre> <pre class="code-character">'µ'</pre> <pre class="code-syntax1">]  </pre> <pre class="code-syntax1">[</pre> <pre class="code-character">"def"</pre> <pre class="code-none">:  </pre> <pre class="code-syntax2">[</pre> <pre class="code-number">123</pre> <pre class="code-none">:  </pre> <pre class="code-keyword">true</pre> <pre class="code-syntax2">]</pre> <pre class="code-none">,  </pre> <pre class="code-syntax2">[</pre> <pre class="code-number">123</pre> <pre class="code-none">,  </pre> <pre class="code-number">456</pre> <pre class="code-syntax2">]</pre> <pre class="code-none">:  </pre> <pre class="code-character">'@'</pre> <pre class="code-syntax1">]  </pre> <pre class="code-syntax1">[ ]</pre> <pre class="code-none">  ...</pre> </div>
                 </div>
-                <p>Note that '_' can be placed at all position on a number.</p>
+                <h2>Note that character '_' can be placed at each position of a number except at the beggining<br>'\u' and '\x' are hexadecimal characters, '\o' are octal characters, '\B' are binary characters</h2>
             </div>
 
             <hr>

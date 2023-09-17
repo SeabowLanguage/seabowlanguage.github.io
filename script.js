@@ -4,11 +4,7 @@ const animated_texts = [];
 function get_frames() {
     const all_frames = document.getElementsByClassName("frame");
     for (const fr of all_frames) {
-        if (fr.classList.contains("frame-left")) {
-            fr.style.left = "-100%";
-        } else {
-            fr.style.right = "-200%";
-        }
+        fr.style.opacity = "0";
         _frames.push(fr);
     }
 }
@@ -27,12 +23,11 @@ function gotoSeabow() {
 
 function update_all() {
     for (let i=0; i<_frames.length; i++) {
-        const direction = (i%2 == 0) ? "left" : "right";
         const rect = _frames[i].getBoundingClientRect();
         if (window.innerHeight > rect.top + rect.height / 3) {
-            _frames[i].style.animation = "frame-" + direction + "-appear 2s ease-in-out forwards";
-        } else {
-            _frames[i].style.animation = "frame-" + direction + "-disappear 2s ease-in-out forwards";
+            _frames[i].style.animation = "frame-appear 3s ease-in-out forwards";
+        } else if (_frames[i].style.animation.length > 0) {
+            _frames[i].style.animation = "frame-disappear 3s ease-in-out forwards";
         }
     }
 
@@ -40,7 +35,7 @@ function update_all() {
         const rect = animated_texts[i].getBoundingClientRect();
         if (window.innerHeight > rect.top + rect.height / 2) {
             animated_texts[i].style.animation = "text-appear 2s ease-in-out forwards";
-        } else {
+        } else if (animated_texts[i].style.animation.length > 0) {
             animated_texts[i].style.animation = "text-disappear 2s ease-in-out forwards";
         }
     }
